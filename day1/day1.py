@@ -1,7 +1,7 @@
 with open('input.txt') as data:
 	data = data.readlines()
-
-data_array = data_array = [int(element.strip()) for element in data]
+	
+data_array = [int(element.strip()) for element in data]
 
 #part1
 
