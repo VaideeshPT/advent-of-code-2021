@@ -24,6 +24,4 @@ def part1(data):
 print(part1(data)) #2003336
 
 def part2(data):
-    oxygen_rating = ''
-    co2_rating = ''
     pass
