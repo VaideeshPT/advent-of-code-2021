@@ -1,15 +1,20 @@
 import numpy as np
 
-with open('input.txt') as data:
-    data = data.readlines()
-    data = np.fromstring(data[0], dtype=int, sep = ',')
+data = np.genfromtxt('input_6.txt', dtype=int, encoding=None, delimiter=",")
 
 days = 80
 
 def part1(data):
 
-    for day in days:
-        data = np.where(data == -1, 6)
+    for day in range(days):
+        data = data - 1
+        append_condition = np.sum(data < 0)
+        data = np.where(data < 0, 6, data)
+        
+        if append_condition:
+            data = np.hstack([data, 8 * np.ones(append_condition)])
+
+    return len(data)
 
 
-        print(np.where(a < 4, -1, 100))
+print(part1(data)) #362740
