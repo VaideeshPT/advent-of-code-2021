@@ -23,7 +23,9 @@ def part1(data):
 
 print(part1(data)) #2003336
 
-def part2(data):
+def part2(a,b):
     oxygen_rating = ''
     co2_rating = ''
-    pass
+    return a+b
+
+print(part2(10,20))
